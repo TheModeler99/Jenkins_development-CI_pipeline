@@ -20,14 +20,14 @@ yum install -y apache-maven
 
 ## Configure MAVEN_HOME and PATH Environment Variables
 rm .bash_profile
-wget https://raw.githubusercontent.com/awanmbandi/realworld-cicd-pipeline-project/jenkins-master-client-config/.bash_profile
+wget https://raw.githubusercontent.com/TheModeler99/RealWorld-cicd-pipeline-project/jenkins-master-client-config/.bash_profile
 source .bash_profile
 mvn -v
 
 # Create ".m2" and download your "settings.xml" file into it to Authorize Maven
 ## Make sure to Update the RAW GITHUB Link to your "settings.xml" config
 mkdir /var/lib/jenkins/.m2
-wget https://raw.githubusercontent.com/awanmbandi/realworld-cicd-pipeline-project/maven-sonarqube-nexus-jenkins-p1/settings.xml -P /var/lib/jenkins/.m2/
+wget https://raw.githubusercontent.com/TheModeler99/Jenkins_development-CI_pipeline/master/settings.xml -P /var/lib/jenkins/.m2/
 chown -R jenkins:jenkins /var/lib/jenkins/.m2/
 chown -R jenkins:jenkins /var/lib/jenkins/.m2/settings.xml
 
