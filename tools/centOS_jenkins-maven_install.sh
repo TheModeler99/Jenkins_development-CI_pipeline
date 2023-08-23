@@ -31,7 +31,7 @@ sudo systemctl enable jenkins
 sudo yum install maven -y
 
 ## Configure MAVEN_HOME and PATH Environment Variables
-rm .bash_profile
+rm -f .bash_profile
 wget https://raw.githubusercontent.com/TheModeler99/RealWorld-cicd-pipeline-project/jenkins-master-client-config/.bash_profile
 source .bash_profile
 mvn -v
